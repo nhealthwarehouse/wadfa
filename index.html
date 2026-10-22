@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wadfan Studio (วาดฝัน สตูดิโอ) | ใบงานออนไลน์ น่ารัก เสริมพัฒนาการเด็ก</title>
+  <meta name="description" content="แหล่งรวมใบงานออนไลน์คุณภาพสูง ไฟล์ PDF ปริ้นท์คมชัด สำหรับคุณครูและผู้ปกครอง เสริมสร้างการเรียนรู้อย่างมีความสุข">
+  
+  <!-- Google Fonts: Prompt & Mali -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Background Ambient Shapes -->
+  <div class="bg-shape shape-pink"></div>
+  <div class="bg-shape shape-blue"></div>
+  <div class="bg-shape shape-yellow"></div>
+
+  <!-- Announcement Bar -->
+  <aside class="top-announcement" aria-label="แถบประกาศโปรโมชั่น">
+    <div class="container announcement-content">
+      <span>✨ ฉลองเปิดร้านใหม่! โหลดใบงานฟรีทันที 1 ชุด เมื่อแอด LINE: <strong>@wadfanstudio</strong></span>
+      <a href="#freebies" class="announcement-link">รับใบงานฟรี <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container">
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-cloud"></i>
+          <i class="fa-solid fa-wand-magic-sparkles star-sparkle"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-en">Wadfan<span class="dot">.</span>Studio</span>
+          <span class="brand-th">วาดฝัน สตูดิโอ</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">หน้าแรก</a></li>
+        <li><a href="#categories" class="nav-link">หมวดหมู่</a></li>
+        <li><a href="#products" class="nav-link">ใบงานแนะนำ</a></li>
+        <li><a href="#features" class="nav-link">จุดเด่นของเรา</a></li>
+        <li><a href="#reviews" class="nav-link">รีวิวจากคุณครู</a></li>
+        <li><a href="#faq" class="nav-link">คำถามที่พบบ่อย</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Search Button -->
+        <button class="icon-btn search-toggle-btn" id="searchToggleBtn" title="ค้นหาใบงาน">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="cart-btn" id="cartBtn" title="ตะกร้าใบงาน">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-label">ตะกร้า</span>
+          <span class="cart-badge" id="cartCount">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="เปิดเมนู">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <i class="fa-solid fa-cloud text-pink"></i>
+        <span>Wadfan Studio</span>
+      </div>
+      <button class="drawer-close" id="drawerCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link"><i class="fa-solid fa-house"></i> หน้าแรก</a></li>
+      <li><a href="#categories" class="drawer-link"><i class="fa-solid fa-shapes"></i> หมวดหมู่ใบงาน</a></li>
+      <li><a href="#products" class="drawer-link"><i class="fa-solid fa-book-open"></i> ใบงานยอดนิยม</a></li>
+      <li><a href="#features" class="drawer-link"><i class="fa-solid fa-heart"></i> จุดเด่นของเรา</a></li>
+      <li><a href="#reviews" class="drawer-link"><i class="fa-solid fa-comments"></i> รีวิวผู้ใช้งาน</a></li>
+      <li><a href="#faq" class="drawer-link"><i class="fa-solid fa-circle-question"></i> คำถามที่พบบ่อย</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="https://line.me" target="_blank" class="btn-primary full-width">
+        <i class="fa-brands fa-line"></i> แอด LINE @wadfanstudio
+      </a>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+      <!-- Left Hero Content -->
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="tag-badge"><i class="fa-solid fa-pencil"></i> Minimal & Warm Learning</span>
+          <span>สร้างสรรค์ด้วยความใส่ใจ</span>
+        </div>
+        <h1 class="hero-title">
+          เติมเต็มรอยยิ้ม <br>
+          และจินตนาการให้ทุกการเรียนรู้ <br>
+          ด้วย <span class="highlight-pink">ใบงานออนไลน์</span> <span class="highlight-blue">Wadfan Studio</span>
+        </h1>
+        <p class="hero-desc">
+          แหล่งรวมใบงานแบบฝึกหัดเด็กปฐมวัย & ประถมศึกษา ดีไซน์มินิมอล อบอุ่น สบายตา
+          ไฟล์ PDF คมชัดสูง 300 DPI ปริ้นท์ง่าย สั่งซื้อแล้วดาวน์โหลดใช้งานได้ทันทีตลอด 24 ชั่วโมง
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#products" class="btn-primary btn-large">
+            <span>เลือกดูใบงานทั้งหมด</span>
+            <i class="fa-solid fa-arrow-down-long"></i>
+          </a>
+          <button class="btn-secondary btn-large" id="heroFreebieBtn">
+            <i class="fa-solid fa-gift"></i>
+            <span>ทดลองโหลดใบงานฟรี</span>
+          </button>
+        </div>
+
+        <!-- Trust Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">650+</span>
+            <span class="stat-text">ชุดใบงานพร้อมใช้</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">12,000+</span>
+            <span class="stat-text">คุณครูและผู้ปกครองไว้วางใจ</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">4.9/5</span>
+            <span class="stat-text">
+              <i class="fa-solid fa-star text-yellow"></i> ความพึงพอใจ
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Hero Visual / Interactive Preview Card Showcase -->
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <!-- Main Showcase Card -->
+          <div class="hero-main-card">
+            <div class="card-glass-header">
+              <div class="window-dots">
+                <span class="dot dot-pink"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-blue"></span>
+              </div>
+              <span class="mockup-label">ชุดแบบฝึกหัดคณิตศาสตร์แสนสนุก</span>
+            </div>
+
+            <div class="mockup-preview-body">
+              <div class="worksheet-mockup-inner">
+                <div class="ws-header-row">
+                  <div class="ws-logo-mini">Wadfan Studio</div>
+                  <div class="ws-title-bar">ใบงาน: นับจำนวน 1-10</div>
+                  <div class="ws-score-box">คะแนน: ___/10</div>
+                </div>
+                <div class="ws-art-grid">
+                  <div class="ws-art-box"><i class="fa-solid fa-apple-whole text-pink"></i> <span>x 3</span></div>
+                  <div class="ws-art-box"><i class="fa-solid fa-star text-yellow"></i> <span>x 5</span></div>
+                  <div class="ws-art-box"><i class="fa-solid fa-heart text-pink"></i> <span>x 2</span></div>
+                  <div class="ws-art-box"><i class="fa-solid fa-cloud text-blue"></i> <span>x 4</span></div>
+                </div>
+                <div class="ws-lines">
+                  <div class="line"></div>
+                  <div class="line short"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-glass-footer">
+              <div class="card-author">
+                <div class="avatar-circle">🎨</div>
+                <div>
+                  <strong>Wadfan Original</strong>
+                  <small>สำหรับอนุบาล 2 - 3 (30 หน้า)</small>
+                </div>
+              </div>
+              <span class="badge-price">฿69</span>
+            </div>
+          </div>
+
+          <!-- Floating Badge 1 (Instant Download) -->
+          <div class="floating-badge badge-top-left">
+            <div class="badge-icon-box bg-pink-light">
+              <i class="fa-solid fa-bolt text-pink"></i>
+            </div>
+            <div>
+              <strong>โหลดได้ทันที</strong>
+              <small>ไฟล์ส่งตรงเข้า Email / LINE</small>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2 (Print Quality) -->
+          <div class="floating-badge badge-bottom-right">
+            <div class="badge-icon-box bg-blue-light">
+              <i class="fa-solid fa-print text-blue"></i>
+            </div>
+            <div>
+              <strong>PDF 300 DPI คมชัด</strong>
+              <small>พิมพ์ขนาด A4 สวยงาม</small>
+            </div>
+          </div>
+
+          <!-- Decorative Floating Sparkles -->
+          <div class="floating-sticker sticker-1">🎀</div>
+          <div class="floating-sticker sticker-2">✏️</div>
+          <div class="floating-sticker sticker-3">☁️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section-padding bg-warm-white" id="categories">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">หมวดหมู่ใบงานการเรียนรู้</span>
+        <h2 class="section-title">เลือกชมแบบฝึกหัดตามหมวดหมู่</h2>
+        <p class="section-desc">ออกแบบให้ครอบคลุมทักษะรอบด้าน ทั้งภาษา ตัวเลข การสังเกต และความคิดสร้างสรรค์</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Cat 1 -->
+        <div class="category-card" data-category="thai">
+          <div class="cat-icon-wrapper bg-pink-light">
+            <span class="cat-emoji">ก</span>
+          </div>
+          <h3>ภาษาไทย & คัดลายมือ</h3>
+          <p>พยัญชนะ สระ วรรณยุกต์ และการประสมคำง่ายๆ สำหรับวัยเริ่มเรียน</p>
+          <span class="cat-count">140+ รายการ</span>
+        </div>
+
+        <!-- Cat 2 -->
+        <div class="category-card" data-category="math">
+          <div class="cat-icon-wrapper bg-blue-light">
+            <span class="cat-emoji">123</span>
+          </div>
+          <h3>คณิตศาสตร์แสนสนุก</h3>
+          <p>การนับเลข บวกลบภาพ เกมเปรียบเทียบขนาด และรูปทรงเรขาคณิต</p>
+          <span class="cat-count">180+ รายการ</span>
+        </div>
+
+        <!-- Cat 3 -->
+        <div class="category-card" data-category="english">
+          <div class="cat-icon-wrapper bg-purple-light">
+            <span class="cat-emoji">ABC</span>
+          </div>
+          <h3>English & Phonics</h3>
+          <p>ตัวอักษร A-Z, คำศัพท์พื้นฐาน, Matching Games พร้อมภาพประกอบน่ารัก</p>
+          <span class="cat-count">165+ รายการ</span>
+        </div>
+
+        <!-- Cat 4 -->
+        <div class="category-card" data-category="art">
+          <div class="cat-icon-wrapper bg-yellow-light">
+            <span class="cat-emoji">🎨</span>
+          </div>
+          <h3>ศิลปะ & พัฒนาการ</h3>
+          <p>ลากเส้นต่อจุด, ระบายสีตามใจชอบ, เกมจับผิดภาพ และแบบฝึกกล้ามเนื้อมือ</p>
+          <span class="cat-count">190+ รายการ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Showcase Section -->
+  <section class="section-padding" id="products">
+    <div class="container">
+      <div class="section-header-flex">
+        <div>
+          <span class="section-subtitle">ใบงานแนะนำยอดนิยม</span>
+          <h2 class="section-title">แบบฝึกหัดขายดีประจำสัปดาห์</h2>
+        </div>
+
+        <!-- Search Bar In Products -->
+        <div class="product-search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="productSearchInput" placeholder="ค้นหาชื่อใบงาน หรือระดับชั้น..." />
+        </div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs-wrapper">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+          <button class="filter-btn" data-filter="kindergarten">อนุบาล & ปฐมวัย</button>
+          <button class="filter-btn" data-filter="primary">ประถมศึกษา</button>
+          <button class="filter-btn" data-filter="math">คณิตศาสตร์</button>
+          <button class="filter-btn" data-filter="thai">ภาษาไทย</button>
+          <button class="filter-btn" data-filter="english">ภาษาอังกฤษ</button>
+          <button class="filter-btn highlight-free-tab" data-filter="free">🎁 โหลดฟรี</button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Generated by JavaScript dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Freebie Banner Section -->
+  <section class="freebie-banner-section" id="freebies">
+    <div class="container">
+      <div class="freebie-card">
+        <div class="freebie-content">
+          <div class="freebie-badge">🎉 ของขวัญพิเศษสำหรับคุณ</div>
+          <h2>ดาวน์โหลดชุดใบงานทดลองใช้ฟรี 100%</h2>
+          <p>สัมผัสคุณภาพไฟล์พิมพ์ 300 DPI พร้อมดีไซน์ลายเส้นสบายตาก่อนตัดสินใจซื้อ รวมแบบฝึกหัดคละหมวดหมู่กว่า 20 หน้า</p>
+          <div class="freebie-form">
+            <div class="input-with-icon">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" id="freebieEmail" placeholder="กรอกอีเมลของคุณเพื่อรับลิงก์ดาวน์โหลด">
+            </div>
+            <button class="btn-primary" id="freebieSubmitBtn">
+              <span>รับลิงก์ไฟล์ฟรีทันที</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+          <span class="freebie-note">🔒 เราเคารพความเป็นส่วนตัวของคุณ จะไม่มีการส่งสแปมใดๆ ทั้งสิ้น</span>
+        </div>
+        <div class="freebie-illustration">
+          <div class="gift-box-art">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us / Features Section -->
+  <section class="section-padding bg-warm-white" id="features">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">ทำไมต้องเลือกเรา</span>
+        <h2 class="section-title">สร้างขึ้นด้วยหัวใจของคนรักการศึกษา</h2>
+        <p class="section-desc">เราใส่ใจทุกรายละเอียดตั้งแต่ลายเส้น โทนสี ไปจนถึงเนื้อหาที่ตรงตามหลักสูตร</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-pink-light">
+            <i class="fa-solid fa-palette text-pink"></i>
+          </div>
+          <h3>ดีไซน์ Minimal สบายตา</h3>
+          <p>ใช้โทนสีนุ่มนวล ไม่ฉูดฉาด ช่วยให้เด็กมีสมาธิจดจ่อกับเนื้อหาการเรียนรู้ได้ดีกว่า</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-blue-light">
+            <i class="fa-solid fa-file-pdf text-blue"></i>
+          </div>
+          <h3>ไฟล์ PDF คมชัดสูง 300 DPI</h3>
+          <p>ปริ้นท์ขนาด A4 ได้คมกริบ ลายเส้นไม่แตก หมึกไม่เลอะ อ่านง่ายทั้งแบบสีและขาวดำ</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-purple-light">
+            <i class="fa-solid fa-graduation-cap text-purple"></i>
+          </div>
+          <h3>ตรงตามหลักสูตรการศึกษา</h3>
+          <p>ลำดับความยากง่ายอย่างเป็นระบบ ออกแบบร่วมกับคุณครูปฐมวัยผู้มีประสบการณ์</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-yellow-light">
+            <i class="fa-solid fa-clock text-yellow-dark"></i>
+          </div>
+          <h3>ดาวน์โหลดได้ทันที 24 ชม.</h3>
+          <p>ระบบจัดส่งไฟล์อัตโนมัติ รวดเร็ว ปริ้นท์ซ้ำได้ตลอดอายุการใช้งาน ไม่จำกัดจำนวนครั้ง</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews / Testimonials Section -->
+  <section class="section-padding" id="reviews">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">เสียงตอบรับจากผู้ใช้จริง</span>
+        <h2 class="section-title">คุณครูและผู้ปกครองชื่นชอบ</h2>
+        <p class="section-desc">ความประทับใจจากคุณพ่อคุณแม่และคุณครูทั่วประเทศที่เลือกใช้ Wadfan Studio</p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-comment">
+            "ใบงานน่ารักมากกก โทนสีละมุนตาจริงๆ ค่ะ เอาไปปริ้นท์ให้เด็กๆ ในห้องทำ ทุกคนตื่นเต้นมาก ไม่น่าเบื่อเหมือนแบบฝึกหัดเดิมๆ ช่วยประหยัดเวลาเตรียมสอนได้เยอะเลยค่ะ"
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">👩‍🏫</div>
+            <div>
+              <strong>ครูเมย์ - สุพรรณษา</strong>
+              <small>คุณครูอนุบาล 3 จ.เชียงใหม่</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-comment">
+            "ลูกชายชอบมาก ปกติไม่ค่อยยอมนั่งทำแบบฝึกหัด พอเห็นรูปประกอบน่ารักๆ ในชุดนับเลข กลายเป็นขอทำเองทุกวัน ไฟล์คมชัด ปริ้นท์ขาวดำก็ยังดูสวยชัดเจน คุ้มค่ามากครับ"
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">👨‍👧</div>
+            <div>
+              <strong>คุณพ่อกอล์ฟ (น้องภีม 5 ขวบ)</strong>
+              <small>ผู้ปกครอง จ.นนทบุรี</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-comment">
+            "ชอบความสะดวก ซื้อปุ๊บได้ลิงก์โหลดทันที ชุด Phonics ทำออกมาได้เข้าใจง่าย เด็ก ป.1 สนุกกับการฝึกอ่านสะกดคำ แนะนำสำหรับโฮมสคูลเลยค่ะ"
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">👩‍👧‍👦</div>
+            <div>
+              <strong>คุณแม่แอน</strong>
+              <small>Homeschooling Mom กรุงเทพฯ</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-warm-white" id="faq">
+    <div class="container faq-container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">ข้อสงสัยที่พบบ่อย</span>
+        <h2 class="section-title">คำถามที่คุณอาจต้องการทราบ</h2>
+        <p class="section-desc">เรารวบรวมคำตอบเพื่อความสะดวกและมั่นใจในการสั่งซื้อ</p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="accordion-item active">
+          <button class="accordion-header">
+            <span>สั่งซื้อแล้วจะได้รับสินค้าอย่างไร?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <p>เมื่อชำระเงินเรียบร้อยแล้ว ระบบจะส่งลิงก์สำหรับดาวน์โหลดไฟล์ดิจิทัล (PDF คุณภาพสูง) ไปยังอีเมลของคุณทันที หรือสามารถดาวน์โหลดผ่านหน้าสรุปคำสั่งซื้อได้โดยตรง สามารถคลิกดาวน์โหลดและบันทึกเก็บไว้ได้ตลอดไปครับ</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>สามารถพิมพ์ซ้ำได้กี่ครั้ง? มีวันหมดอายุไหม?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <p>สามารถพิมพ์ (Print) ซ้ำได้ไม่จำกัดจำนวนครั้งเพื่อการเรียนรู้ของบุตรหลานหรือนักเรียนในชั้นเรียนของคุณ และไม่มีวันหมดอายุ สามารถดาวน์โหลดเก็บไว้ในคอมพิวเตอร์ แท็บเล็ต หรือ Google Drive ได้เลยครับ</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>สามารถนำไปใช้เชิงพาณิชย์ หรือจำหน่ายต่อได้หรือไม่?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <p>ผลงานทั้งหมดมีลิขสิทธิ์ของ Wadfan Studio อนุญาตให้ใช้สำหรับการเรียนการสอนส่วนบุคคลหรือในชั้นเรียนเท่านั้น <strong>ไม่อนุญาต</strong> ให้นำไฟล์ไปจำหน่ายต่อ ดัดแปลง แจกจ่ายสาธารณะ หรือใช้ในเชิงพาณิชย์ทุกกรณี</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>หากสั่งซื้อแล้วพบปัญหาดาวน์โหลดไม่ได้ ทำอย่างไร?</span>
+            <i class="fa-solid fa-chevron-down accordion-icon"></i>
+          </button>
+          <div class="accordion-body">
+            <p>คุณลูกค้าสามารถทักข้อความหาแอดมินได้ทาง LINE Official: <strong>@wadfanstudio</strong> พร้อมแจ้งเลขออเดอร์หรือหลักฐานการโอน ทีมงานพร้อมช่วยส่งไฟล์สำรองให้ทางไลน์อย่างรวดเร็วทุกวัน เวลา 08:00 - 22:00 น. ครับ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box Banner -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-decor-circle circle-1"></div>
+        <div class="cta-decor-circle circle-2"></div>
+        <h2>เริ่มต้นสร้างช่วงเวลาการเรียนรู้แสนสุขให้ลูกรักวันนี้</h2>
+        <p>ให้แบบฝึกหัดของ Wadfan Studio เป็นตัวช่วยสร้างรอยยิ้มและทักษะที่ยั่งยืน</p>
+        <div class="cta-actions">
+          <a href="#products" class="btn-primary btn-large btn-white-shadow">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>เลือกซื้อแบบฝึกหัดเลย</span>
+          </a>
+          <a href="https://line.me" target="_blank" class="btn-outline-white btn-large">
+            <i class="fa-brands fa-line"></i>
+            <span>ปรึกษาแอดมินทาง LINE</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Col 1: About -->
+      <div class="footer-col footer-brand-col">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <div class="logo-text">
+            <span class="brand-en">Wadfan<span class="dot">.</span>Studio</span>
+            <span class="brand-th">วาดฝัน สตูดิโอ</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          สตูดิโอออกแบบใบงานและสื่อการเรียนรู้ออนไลน์สำหรับเด็กยุคใหม่ สไตล์ Minimal & Warm อบอุ่น สบายตา เพื่อการเรียนรู้ที่มีความสุข
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon" title="Line OA"><i class="fa-brands fa-line"></i></a>
+          <a href="#" class="social-icon" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-heading">เมนูลัด</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">หน้าแรก</a></li>
+          <li><a href="#categories">หมวดหมู่ใบงาน</a></li>
+          <li><a href="#products">ใบงานยอดนิยม</a></li>
+          <li><a href="#features">ทำไมต้องเลือกเรา</a></li>
+          <li><a href="#reviews">รีวิวคุณครู</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Categories -->
+      <div class="footer-col">
+        <h4 class="footer-heading">หมวดหมู่แนะนำ</h4>
+        <ul class="footer-links">
+          <li><a href="#products" onclick="window.filterByCategory('kindergarten')">แบบฝึกหัดปฐมวัย</a></li>
+          <li><a href="#products" onclick="window.filterByCategory('math')">คณิตศาสตร์แสนสนุก</a></li>
+          <li><a href="#products" onclick="window.filterByCategory('thai')">ภาษาไทย & คัดลายมือ</a></li>
+          <li><a href="#products" onclick="window.filterByCategory('english')">English & Phonics</a></li>
+          <li><a href="#products" onclick="window.filterByCategory('free')">ดาวน์โหลดฟรี</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact -->
+      <div class="footer-col">
+        <h4 class="footer-heading">ติดต่อเรา</h4>
+        <div class="contact-info">
+          <p><i class="fa-brands fa-line text-green"></i> LINE: @wadfanstudio</p>
+          <p><i class="fa-solid fa-envelope text-pink"></i> contact@wadfanstudio.com</p>
+          <p><i class="fa-solid fa-clock text-blue"></i> ทุกวัน 08:00 - 22:00 น.</p>
+        </div>
+        <div class="payment-methods">
+          <span>รองรับการชำระเงิน:</span>
+          <div class="pay-icons">
+            <span class="pay-tag"><i class="fa-solid fa-qrcode"></i> พร้อมเพย์</span>
+            <span class="pay-tag"><i class="fa-solid fa-building-columns"></i> โอนธนาคาร</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 Wadfan Studio (วาดฝัน สตูดิโอ). สงวนลิขสิทธิ์ทุกประการ</p>
+        <div class="footer-legal">
+          <a href="#">เงื่อนไขการใช้งาน</a>
+          <a href="#">นโยบายความเป็นส่วนตัว</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Worksheet Quick Preview Modal -->
+  <div class="modal-backdrop" id="previewModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+      <div class="preview-modal-content" id="previewModalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="ตะกร้าสินค้า">
+    <div class="cart-drawer-header">
+      <div class="drawer-title">
+        <i class="fa-solid fa-basket-shopping text-pink"></i>
+        <h3>ตะกร้าใบงานของคุณ</h3>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn">&times;</button>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="cart-items" id="cartItemsContainer">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Cart Footer & Summary -->
+    <div class="cart-drawer-footer">
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>จำนวนรายการ</span>
+          <span id="cartTotalItemsCount">0 รายการ</span>
+        </div>
+        <div class="summary-row total-row">
+          <span>ยอดรวมทั้งหมด</span>
+          <span class="total-price-text" id="cartTotalPrice">฿0</span>
+        </div>
+      </div>
+      <button class="btn-primary checkout-btn" id="checkoutBtn" disabled>
+        <i class="fa-solid fa-lock"></i>
+        <span>ดำเนินการสั่งซื้อ & รับไฟล์</span>
+      </button>
+      <p class="cart-secure-text"><i class="fa-solid fa-shield-halved"></i> รับประกันดาวน์โหลดได้ทันที 100%</p>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+
+  <!-- Checkout Demo Modal -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal-dialog checkout-dialog">
+      <button class="modal-close-btn" id="checkoutCloseBtn">&times;</button>
+      <div class="checkout-modal-body">
+        <div class="checkout-header-badge">
+          <i class="fa-solid fa-circle-check text-green"></i>
+          <h3>ยืนยันคำสั่งซื้อ</h3>
+        </div>
+        <p class="checkout-sub">กรอกข้อมูลเพื่อรับลิงก์ดาวน์โหลดไฟล์ PDF ทันที</p>
+
+        <form id="checkoutForm" class="checkout-form" onsubmit="event.preventDefault(); window.handleOrderSubmit();">
+          <div class="form-group">
+            <label for="orderName">ชื่อ-นามสกุล / ชื่อคุณครู</label>
+            <input type="text" id="orderName" required placeholder="เช่น ครูเมย์ สุพรรณษา">
+          </div>
+          <div class="form-group">
+            <label for="orderEmail">อีเมลสำหรับจัดส่งไฟล์ PDF (สำคัญมาก)</label>
+            <input type="email" id="orderEmail" required placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label for="orderPhone">เบอร์โทรศัพท์ หรือ LINE ID</label>
+            <input type="text" id="orderPhone" placeholder="08X-XXX-XXXX หรือ LINE ID">
+          </div>
+
+          <div class="checkout-payment-box">
+            <h4><i class="fa-solid fa-qrcode text-blue"></i> ชำระเงินผ่าน PromptPay QR</h4>
+            <div class="promptpay-qr-mock">
+              <div class="qr-box">
+                <i class="fa-solid fa-qrcode qr-large-icon"></i>
+                <span>สแกนเพื่อจ่าย</span>
+              </div>
+              <div class="qr-info">
+                <small>ยอดชำระสุทธิ</small>
+                <div class="checkout-due-amount" id="checkoutDueAmount">฿0</div>
+                <small>Wadfan Studio (พร้อมเพย์ 089-XXX-XXXX)</small>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary full-width btn-large">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+            <span>ยืนยันการชำระเงิน & รับไฟล์ทันที</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
